@@ -1,0 +1,15 @@
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+.venv/
+build/
+dist/
+artifacts/
+runs/
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
