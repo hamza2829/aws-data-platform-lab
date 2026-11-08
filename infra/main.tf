@@ -100,7 +100,7 @@ resource "aws_iam_role_policy" "pipeline" {
 }
 
 resource "aws_iam_role" "analyst" {
-  name = "${var.prefix}-analyst"
+  name               = "${var.prefix}-analyst"
   assume_role_policy = aws_iam_role.pipeline.assume_role_policy
 }
 
@@ -111,9 +111,9 @@ resource "aws_iam_role_policy" "analyst" {
     Version = "2012-10-17"
     Statement = [
       {
-        Effect    = "Allow"
-        Action    = ["s3:ListBucket"]
-        Resource  = aws_s3_bucket.layer["curated"].arn
+        Effect   = "Allow"
+        Action   = ["s3:ListBucket"]
+        Resource = aws_s3_bucket.layer["curated"].arn
         Condition = {
           StringLike = { "s3:prefix" = ["weather/*"] }
         }
