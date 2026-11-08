@@ -11,8 +11,14 @@ from pathlib import Path
 
 import duckdb
 
-from data_platform_lab.contract import SUM_COLUMNS, ContractError, csv_bytes, parse_day, raw_metrics
-from data_platform_lab.contract import validate_csv
+from data_platform_lab.contract import (
+    SUM_COLUMNS,
+    ContractError,
+    csv_bytes,
+    parse_day,
+    raw_metrics,
+    validate_csv,
+)
 from data_platform_lab.storage import S3Store
 
 STATE_KEY = "_state/watermark.json"
@@ -79,7 +85,9 @@ def mismatches(raw: dict, curated: dict) -> list[str]:
         differences.append(f"row count: raw={raw['rows']}, curated={curated['rows']}")
     for name in SUM_COLUMNS:
         if Decimal(raw["sums"][name]) != Decimal(curated["sums"][name]):
-            differences.append(f"{name} sum: raw={raw['sums'][name]}, curated={curated['sums'][name]}")
+            differences.append(
+                f"{name} sum: raw={raw['sums'][name]}, curated={curated['sums'][name]}"
+            )
     return differences
 
 
@@ -90,7 +98,8 @@ class PipelineFailure(RuntimeError):
 
 
 def reconciliation_markdown(report: dict) -> str:
-    lines = ["# Reconciliation report", "", f"Run: `{report['run_id']}`. Status: **{report['status']}**.",
+    lines = ["# Reconciliation report", "",
+             f"Run: `{report['run_id']}`. Status: **{report['status']}**.",
              "", f"Watermark before: `{report['watermark_before']}`. "
              f"Watermark after: `{report['watermark_after']}`.", "",
              "| Day | Status | Stage | Raw rows | Curated rows | Reason |",
@@ -118,7 +127,8 @@ def run(store: S3Store, output: Path, day: str | None = None,
     folder.mkdir(parents=True, exist_ok=False)
     logs = []
     report = dict(run_id=run_id, status="running", started_at=datetime.now(UTC).isoformat(),
-                  watermark_before=None, watermark_after=None, processed_days=[], days=[], error=None)
+                  watermark_before=None, watermark_after=None,
+                  processed_days=[], days=[], error=None)
 
     def log(event: str, **fields):
         entry = dict(timestamp=datetime.now(UTC).isoformat(), run_id=run_id, event=event, **fields)
@@ -144,8 +154,11 @@ def run(store: S3Store, output: Path, day: str | None = None,
             item = dict(day=selected, status="running", stage="discovery", raw=None, curated=None)
             report["days"].append(item)
             log("partition_started", day=selected)
-            if not day and current and selected != (date.fromisoformat(current) + timedelta(days=1)).isoformat():
-                raise ValueError(f"missing raw day after watermark {current}; next raw day is {selected}")
+            if (not day and current and selected !=
+                    (date.fromisoformat(current) + timedelta(days=1)).isoformat()):
+                raise ValueError(
+                    f"missing raw day after watermark {current}; next raw day is {selected}"
+                )
             item["stage"] = "schema_validation"
             payload, version = store.read(store.raw_bucket, f"weather/date={selected}/source.csv")
             rows = validate_csv(payload, selected)
@@ -161,7 +174,8 @@ def run(store: S3Store, output: Path, day: str | None = None,
                 if differences:
                     raise ValueError("reconciliation mismatch: " + "; ".join(differences))
                 item["stage"] = "publication"
-                store.put(store.curated_bucket, key, candidate.read_bytes(), "application/vnd.apache.parquet")
+                store.put(store.curated_bucket, key, candidate.read_bytes(),
+                          "application/vnd.apache.parquet")
                 log("partition_published", day=selected, key=key)
                 stored, curated_version = store.read(store.curated_bucket, key)
                 candidate.write_bytes(stored)

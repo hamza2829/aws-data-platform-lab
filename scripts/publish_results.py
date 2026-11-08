@@ -36,7 +36,8 @@ lines = [
     "the pipeline recovery drill, Dagster execution, and emulator cleanup all passed.", "",
     f"The LocalStack integration produced **{integration['curated_partitions']} daily partitions** "
     f"and **{integration['curated_rows']} curated rows**. Final watermark: "
-    f"`{integration['watermark']}`. Run history records **{integration['history_runs']} attempts**, "
+    f"`{integration['watermark']}`. Run history records "
+    f"**{integration['history_runs']} attempts**, "
     f"including **{integration['failed_attempts']} deliberately failed loads**.", "",
     "The injected row-loss failure left the watermark at `2012-01-02`; resume began at "
     "`2012-01-03`. An unchanged rerun processed no days. Reprocessing an existing day "

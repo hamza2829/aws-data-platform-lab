@@ -30,7 +30,8 @@ def test_local_client_and_assumed_role(monkeypatch, store):
     class FakeSTS:
         def assume_role(self, **kwargs):
             assert kwargs["RoleArn"] == "arn:aws:iam::000000000000:role/lab-pipeline"
-            return dict(Credentials=dict(AccessKeyId="test", SecretAccessKey="test", SessionToken="test"))
+            return dict(Credentials=dict(AccessKeyId="test", SecretAccessKey="test",
+                                          SessionToken="test"))
 
     monkeypatch.setattr("data_platform_lab.storage.boto3.client",
                         lambda service, **kwargs: FakeSTS() if service == "sts" else store.client)

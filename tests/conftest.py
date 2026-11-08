@@ -21,5 +21,6 @@ def store():
                                aws_secret_access_key="test")
         for bucket in ("lab-raw", "lab-curated"):
             client.create_bucket(Bucket=bucket)
-            client.put_bucket_versioning(Bucket=bucket, VersioningConfiguration={"Status": "Enabled"})
+            client.put_bucket_versioning(Bucket=bucket,
+                                          VersioningConfiguration={"Status": "Enabled"})
         yield S3Store(client, "lab-raw", "lab-curated")

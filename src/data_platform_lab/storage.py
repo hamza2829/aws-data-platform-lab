@@ -50,11 +50,13 @@ def make_store(endpoint: str = "http://localhost:4566", prefix: str = "aws-data-
     credentials = dict(aws_access_key_id="test", aws_secret_access_key="test")
     if role_arn:
         sts = boto3.client("sts", endpoint_url=endpoint, region_name="us-east-1", **credentials)
-        result = sts.assume_role(RoleArn=role_arn, RoleSessionName="data-platform-lab")["Credentials"]
+        assumed = sts.assume_role(RoleArn=role_arn, RoleSessionName="data-platform-lab")
+        result = assumed["Credentials"]
         credentials = dict(aws_access_key_id=result["AccessKeyId"],
                            aws_secret_access_key=result["SecretAccessKey"],
                            aws_session_token=result["SessionToken"])
     client = boto3.client("s3", endpoint_url=endpoint, region_name="us-east-1",
-                          config=Config(s3={"addressing_style": "path"}, retries={"max_attempts": 3}),
+                          config=Config(s3={"addressing_style": "path"},
+                                        retries={"max_attempts": 3}),
                           **credentials)
     return S3Store(client, f"{prefix}-raw", f"{prefix}-curated")

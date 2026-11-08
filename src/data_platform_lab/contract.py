@@ -30,7 +30,9 @@ def validate_csv(payload: bytes, expected_day: str | None = None) -> list[dict]:
     try:
         reader = csv.DictReader(io.StringIO(payload.decode("utf-8")), strict=True)
         if reader.fieldnames != COLUMNS:
-            raise ContractError(f"schema columns changed: expected {COLUMNS}, got {reader.fieldnames}")
+            raise ContractError(
+                f"schema columns changed: expected {COLUMNS}, got {reader.fieldnames}"
+            )
         rows = list(reader)
     except (UnicodeError, csv.Error) as exc:
         raise ContractError(f"invalid CSV: {exc}") from exc
@@ -56,7 +58,8 @@ def validate_csv(payload: bytes, expected_day: str | None = None) -> list[dict]:
                     ) or number != number.quantize(Decimal("0.1")):
                         raise InvalidOperation
                 except InvalidOperation as exc:
-                    raise ContractError(f"row {index}: {name} violates decimal range or scale") from exc
+                    message = f"row {index}: {name} violates decimal range or scale"
+                    raise ContractError(message) from exc
             elif spec["type"] == "string" and value not in spec["enum"]:
                 raise ContractError(f"row {index}: unknown {name}: {value}")
         if Decimal(row["temp_min"]) > Decimal(row["temp_max"]):
@@ -73,5 +76,6 @@ def csv_bytes(rows: list[dict]) -> bytes:
 
 
 def raw_metrics(rows: list[dict]) -> dict:
-    return dict(rows=len(rows), sums={name: str(sum((Decimal(row[name]) for row in rows), Decimal(0)))
-                                     for name in SUM_COLUMNS})
+    sums = {name: str(sum((Decimal(row[name]) for row in rows), Decimal(0)))
+            for name in SUM_COLUMNS}
+    return dict(rows=len(rows), sums=sums)

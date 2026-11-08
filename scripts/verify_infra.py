@@ -43,4 +43,4 @@ for kind, policy_name in (("pipeline", "pipeline-s3"), ("analyst", "analyst-cura
     policies[kind] = policy
 Path("artifacts/infra-verification.json").write_text(json.dumps(
     dict(endpoint=endpoint, buckets=checks, policies=policies, passed=True), indent=2) + "\n")
-print("Verified both buckets, versioning, lifecycle, encryption, public access blocks, and IAM policies")
+print("Verified both buckets, versioning, lifecycle, encryption, public access blocks, and IAM")
