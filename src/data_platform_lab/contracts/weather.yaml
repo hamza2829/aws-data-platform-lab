@@ -1,0 +1,25 @@
+version: 1
+primary_key: [date]
+columns:
+  date:
+    type: date
+  precipitation:
+    type: decimal
+    min: 0
+    max: 500
+  temp_max:
+    type: decimal
+    min: -90
+    max: 60
+  temp_min:
+    type: decimal
+    min: -90
+    max: 60
+  wind:
+    type: decimal
+    min: 0
+    max: 100
+  weather:
+    type: string
+    enum: [drizzle, rain, sun, snow, fog]
+reconcile_sums: [precipitation, temp_max, temp_min, wind]
