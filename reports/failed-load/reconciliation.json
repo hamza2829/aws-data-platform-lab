@@ -1,0 +1,93 @@
+{
+  "days": [
+    {
+      "curated": {
+        "rows": 1,
+        "sums": {
+          "precipitation": "0.0",
+          "temp_max": "12.8",
+          "temp_min": "5.0",
+          "wind": "4.7"
+        }
+      },
+      "curated_version_id": "AaG9PqqZs5WacaAciDjj4JExKtNUNHtA",
+      "day": "2012-01-01",
+      "raw": {
+        "rows": 1,
+        "sums": {
+          "precipitation": "0.0",
+          "temp_max": "12.8",
+          "temp_min": "5.0",
+          "wind": "4.7"
+        }
+      },
+      "raw_sha256": "1f34b3cd4e23c4b594a64de3dc2e4b1da8eb11b0e1be40dbe8f3ac2721386d7c",
+      "raw_version_id": "AaG9PqqS5p_irqkhXVS5OOij0uvwBu5k",
+      "stage": "readback_reconciliation",
+      "status": "passed"
+    },
+    {
+      "curated": {
+        "rows": 1,
+        "sums": {
+          "precipitation": "10.9",
+          "temp_max": "10.6",
+          "temp_min": "2.8",
+          "wind": "4.5"
+        }
+      },
+      "curated_version_id": "AaG9Pqqb9dB6I_JsJUMjZFOTPjSV_bf2",
+      "day": "2012-01-02",
+      "raw": {
+        "rows": 1,
+        "sums": {
+          "precipitation": "10.9",
+          "temp_max": "10.6",
+          "temp_min": "2.8",
+          "wind": "4.5"
+        }
+      },
+      "raw_sha256": "f60ed02bf064fd83b5a1d95473ce3a177e52277f6fbcf9604b45976f885e92dd",
+      "raw_version_id": "AaG9PqqT9wspINNHO.U9IHnfxf_9PnYe",
+      "stage": "readback_reconciliation",
+      "status": "passed"
+    },
+    {
+      "curated": {
+        "rows": 0,
+        "sums": {
+          "precipitation": "0.0",
+          "temp_max": "0.0",
+          "temp_min": "0.0",
+          "wind": "0.0"
+        }
+      },
+      "day": "2012-01-03",
+      "error": "ValueError: reconciliation mismatch: row count: raw=1, curated=0; precipitation sum: raw=0.8, curated=0.0; temp_max sum: raw=11.7, curated=0.0; temp_min sum: raw=7.2, curated=0.0; wind sum: raw=2.3, curated=0.0",
+      "raw": {
+        "rows": 1,
+        "sums": {
+          "precipitation": "0.8",
+          "temp_max": "11.7",
+          "temp_min": "7.2",
+          "wind": "2.3"
+        }
+      },
+      "raw_sha256": "8a9a4ad761d487b9e92d5afa60174d96a286ba4c9eb41bcf0d99dc0215b683e8",
+      "raw_version_id": "AaG9PqqUJpDeco.0diil.SZKY77SEPxX",
+      "stage": "prepublication_reconciliation",
+      "status": "failed"
+    }
+  ],
+  "error": "ValueError: reconciliation mismatch: row count: raw=1, curated=0; precipitation sum: raw=0.8, curated=0.0; temp_max sum: raw=11.7, curated=0.0; temp_min sum: raw=7.2, curated=0.0; wind sum: raw=2.3, curated=0.0",
+  "finished_at": "2026-11-08T22:19:23.258003+00:00",
+  "processed_days": [
+    "2012-01-01",
+    "2012-01-02"
+  ],
+  "run_id": "ed5474ed1c464510b6fed91b96e02163",
+  "started_at": "2026-11-08T22:19:23.169239+00:00",
+  "status": "failed",
+  "watermark_after": "2012-01-02",
+  "watermark_before": null
+}

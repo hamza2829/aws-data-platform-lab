@@ -28,7 +28,19 @@ flowchart LR
 ## Measured results
 
 <!-- RESULTS:START -->
-Measurements are pending the first green GitHub Actions run. No numbers are claimed yet.
+Measured by [GitHub Actions](https://github.com/hamza2829/aws-data-platform-lab/actions/runs/42529503784) on source commit `7713f18f196602eab0eace87d362146b337c2ed3`.
+
+**47 tests passed**, none skipped. Statement and branch coverage: **99.13%**.
+
+Terraform format, validation, apply, a second no-change plan, boto3 resource checks, the pipeline recovery drill, Dagster execution, and emulator cleanup all passed.
+
+The LocalStack integration produced **7 daily partitions** and **7 curated rows**. Final watermark: `2012-01-07`. Run history records **7 attempts**, including **2 deliberately failed loads**.
+
+The injected row-loss failure left the watermark at `2012-01-02`; resume began at `2012-01-03`. An unchanged rerun processed no days. Reprocessing an existing day replaced its single object, created a new S3 version, and kept the partition count fixed. A renamed `wind` column was rejected with an explicit schema error.
+
+Evidence: [raw CI summary](reports/final.json), [run history](reports/history.json), [failed load reconciliation](reports/failed-load/reconciliation.md), [recovered reconciliation](reports/resumed-load/reconciliation.md), [schema failure](reports/schema-failure/reconciliation.md), and [failed structured logs](reports/failed-load/events.jsonl). The full artifact also contains Parquet objects, coverage HTML, Terraform outputs, and all run reports.
+
+This section and the evidence are committed after the required jobs pass. That generated report commit does not trigger another workflow. The source commit above identifies the code actually verified.
 <!-- RESULTS:END -->
 
 ## Run the emulator lab

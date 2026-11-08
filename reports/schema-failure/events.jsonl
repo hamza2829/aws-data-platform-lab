@@ -1,0 +1,3 @@
+{"event": "run_started", "mode": "reprocess", "run_id": "b99b2d6457624432ba980337cbbff46c", "timestamp": "2026-11-08T22:19:23.490647+00:00"}
+{"day": "2012-01-03", "event": "partition_started", "run_id": "b99b2d6457624432ba980337cbbff46c", "timestamp": "2026-11-08T22:19:23.494979+00:00"}
+{"error": "ContractError: schema columns changed: expected ['date', 'precipitation', 'temp_max', 'temp_min', 'wind', 'weather'], got ['date', 'precipitation', 'temp_max', 'temp_min', 'gust', 'weather']", "event": "run_failed", "run_id": "b99b2d6457624432ba980337cbbff46c", "timestamp": "2026-11-08T22:19:23.496762+00:00", "watermark": "2012-01-07"}

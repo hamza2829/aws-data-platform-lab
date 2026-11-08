@@ -1,0 +1,20 @@
+{
+  "days": [
+    {
+      "curated": null,
+      "day": "2012-01-03",
+      "error": "ContractError: schema columns changed: expected ['date', 'precipitation', 'temp_max', 'temp_min', 'wind', 'weather'], got ['date', 'precipitation', 'temp_max', 'temp_min', 'gust', 'weather']",
+      "raw": null,
+      "stage": "schema_validation",
+      "status": "failed"
+    }
+  ],
+  "error": "ContractError: schema columns changed: expected ['date', 'precipitation', 'temp_max', 'temp_min', 'wind', 'weather'], got ['date', 'precipitation', 'temp_max', 'temp_min', 'gust', 'weather']",
+  "finished_at": "2026-11-08T22:19:23.496820+00:00",
+  "processed_days": [],
+  "run_id": "b99b2d6457624432ba980337cbbff46c",
+  "started_at": "2026-11-08T22:19:23.490639+00:00",
+  "status": "failed",
+  "watermark_after": "2012-01-07",
+  "watermark_before": "2012-01-07"
+}

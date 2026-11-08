@@ -1,0 +1,365 @@
+[
+  {
+    "days": [],
+    "error": null,
+    "finished_at": "2026-11-08T22:19:23.435735+00:00",
+    "processed_days": [],
+    "run_id": "69bfa903332f49549aad5fe15dab72e7",
+    "started_at": "2026-11-08T22:19:23.431495+00:00",
+    "status": "succeeded",
+    "watermark_after": "2012-01-07",
+    "watermark_before": "2012-01-07"
+  },
+  {
+    "days": [
+      {
+        "curated": {
+          "rows": 1,
+          "sums": {
+            "precipitation": "0.8",
+            "temp_max": "11.7",
+            "temp_min": "7.2",
+            "wind": "2.3"
+          }
+        },
+        "curated_version_id": "AaG9Pqq.cF4brMMVMcXoMJqcS1mI.xLt",
+        "day": "2012-01-03",
+        "raw": {
+          "rows": 1,
+          "sums": {
+            "precipitation": "0.8",
+            "temp_max": "11.7",
+            "temp_min": "7.2",
+            "wind": "2.3"
+          }
+        },
+        "raw_sha256": "8a9a4ad761d487b9e92d5afa60174d96a286ba4c9eb41bcf0d99dc0215b683e8",
+        "raw_version_id": "AaG9Pqq9pT.97Rci2wk68deuaWja2Ghl",
+        "stage": "readback_reconciliation",
+        "status": "passed"
+      }
+    ],
+    "error": null,
+    "finished_at": "2026-11-08T22:19:23.650254+00:00",
+    "processed_days": [
+      "2012-01-03"
+    ],
+    "run_id": "9ec2eeeaec8f461fb9ceaa30fd48c935",
+    "started_at": "2026-11-08T22:19:23.612092+00:00",
+    "status": "succeeded",
+    "watermark_after": "2012-01-07",
+    "watermark_before": "2012-01-07"
+  },
+  {
+    "days": [
+      {
+        "curated": {
+          "rows": 1,
+          "sums": {
+            "precipitation": "0.8",
+            "temp_max": "11.7",
+            "temp_min": "7.2",
+            "wind": "2.3"
+          }
+        },
+        "curated_version_id": "AaG9PqqhDgQWL9ODU5IrdzFKKnNWoEaq",
+        "day": "2012-01-03",
+        "raw": {
+          "rows": 1,
+          "sums": {
+            "precipitation": "0.8",
+            "temp_max": "11.7",
+            "temp_min": "7.2",
+            "wind": "2.3"
+          }
+        },
+        "raw_sha256": "8a9a4ad761d487b9e92d5afa60174d96a286ba4c9eb41bcf0d99dc0215b683e8",
+        "raw_version_id": "AaG9PqqUJpDeco.0diil.SZKY77SEPxX",
+        "stage": "readback_reconciliation",
+        "status": "passed"
+      },
+      {
+        "curated": {
+          "rows": 1,
+          "sums": {
+            "precipitation": "20.3",
+            "temp_max": "12.2",
+            "temp_min": "5.6",
+            "wind": "4.7"
+          }
+        },
+        "curated_version_id": "AaG9PqqjA3y546Jww1SUxiFsf6O47cr_",
+        "day": "2012-01-04",
+        "raw": {
+          "rows": 1,
+          "sums": {
+            "precipitation": "20.3",
+            "temp_max": "12.2",
+            "temp_min": "5.6",
+            "wind": "4.7"
+          }
+        },
+        "raw_sha256": "113cad18c8c34c7bddcbc20cab3d345eaf4822ce9a32c532dd8036dcbd06aa8f",
+        "raw_version_id": "AaG9PqqVNhgOATOqDY0BdDGT2o._rjQt",
+        "stage": "readback_reconciliation",
+        "status": "passed"
+      },
+      {
+        "curated": {
+          "rows": 1,
+          "sums": {
+            "precipitation": "1.3",
+            "temp_max": "8.9",
+            "temp_min": "2.8",
+            "wind": "6.1"
+          }
+        },
+        "curated_version_id": "AaG9PqqlYKHVig7ZgJdegGmClb84omIR",
+        "day": "2012-01-05",
+        "raw": {
+          "rows": 1,
+          "sums": {
+            "precipitation": "1.3",
+            "temp_max": "8.9",
+            "temp_min": "2.8",
+            "wind": "6.1"
+          }
+        },
+        "raw_sha256": "e6c825f0ff52dbbcf3a951c8ff7d1213732fc3489e451d7df7a757a4bc6896f5",
+        "raw_version_id": "AaG9PqqWLZ_U_vDiThZN.KpOYdJ8BeaF",
+        "stage": "readback_reconciliation",
+        "status": "passed"
+      },
+      {
+        "curated": {
+          "rows": 1,
+          "sums": {
+            "precipitation": "2.5",
+            "temp_max": "4.4",
+            "temp_min": "2.2",
+            "wind": "2.2"
+          }
+        },
+        "curated_version_id": "AaG9Pqqn5B4nSr16iNHVNTAoJAbKpNPM",
+        "day": "2012-01-06",
+        "raw": {
+          "rows": 1,
+          "sums": {
+            "precipitation": "2.5",
+            "temp_max": "4.4",
+            "temp_min": "2.2",
+            "wind": "2.2"
+          }
+        },
+        "raw_sha256": "013c6c9294a22c018d42ab14738664a370b6000f494a682f2cb793bf2ba83dd2",
+        "raw_version_id": "AaG9PqqXxlC2ZC_LqhcJWDglkgfg1Zmr",
+        "stage": "readback_reconciliation",
+        "status": "passed"
+      },
+      {
+        "curated": {
+          "rows": 1,
+          "sums": {
+            "precipitation": "0.0",
+            "temp_max": "7.2",
+            "temp_min": "2.8",
+            "wind": "2.3"
+          }
+        },
+        "curated_version_id": "AaG9PqqpE.IAMmcTO0527HwBmBF9NKKc",
+        "day": "2012-01-07",
+        "raw": {
+          "rows": 1,
+          "sums": {
+            "precipitation": "0.0",
+            "temp_max": "7.2",
+            "temp_min": "2.8",
+            "wind": "2.3"
+          }
+        },
+        "raw_sha256": "478445f9861a4f97e36c32947bb74e47a9159e1c8b2d6df61ae68b96a8dd915a",
+        "raw_version_id": "AaG9PqqYf.uH_pHaxJBFMDsE2yUqUXVB",
+        "stage": "readback_reconciliation",
+        "status": "passed"
+      }
+    ],
+    "error": null,
+    "finished_at": "2026-11-08T22:19:23.421186+00:00",
+    "processed_days": [
+      "2012-01-03",
+      "2012-01-04",
+      "2012-01-05",
+      "2012-01-06",
+      "2012-01-07"
+    ],
+    "run_id": "b4bbce9fafec41c4b9cf2d7a131d0af8",
+    "started_at": "2026-11-08T22:19:23.268359+00:00",
+    "status": "succeeded",
+    "watermark_after": "2012-01-07",
+    "watermark_before": "2012-01-02"
+  },
+  {
+    "days": [
+      {
+        "curated": null,
+        "day": "2012-01-03",
+        "error": "ContractError: schema columns changed: expected ['date', 'precipitation', 'temp_max', 'temp_min', 'wind', 'weather'], got ['date', 'precipitation', 'temp_max', 'temp_min', 'gust', 'weather']",
+        "raw": null,
+        "stage": "schema_validation",
+        "status": "failed"
+      }
+    ],
+    "error": "ContractError: schema columns changed: expected ['date', 'precipitation', 'temp_max', 'temp_min', 'wind', 'weather'], got ['date', 'precipitation', 'temp_max', 'temp_min', 'gust', 'weather']",
+    "finished_at": "2026-11-08T22:19:23.496820+00:00",
+    "processed_days": [],
+    "run_id": "b99b2d6457624432ba980337cbbff46c",
+    "started_at": "2026-11-08T22:19:23.490639+00:00",
+    "status": "failed",
+    "watermark_after": "2012-01-07",
+    "watermark_before": "2012-01-07"
+  },
+  {
+    "days": [
+      {
+        "curated": {
+          "rows": 1,
+          "sums": {
+            "precipitation": "0.0",
+            "temp_max": "12.8",
+            "temp_min": "5.0",
+            "wind": "4.7"
+          }
+        },
+        "curated_version_id": "AaG9Pqqza.mQP8mqjGau3mdhQYDapXH4",
+        "day": "2012-01-01",
+        "raw": {
+          "rows": 1,
+          "sums": {
+            "precipitation": "0.0",
+            "temp_max": "12.8",
+            "temp_min": "5.0",
+            "wind": "4.7"
+          }
+        },
+        "raw_sha256": "1f34b3cd4e23c4b594a64de3dc2e4b1da8eb11b0e1be40dbe8f3ac2721386d7c",
+        "raw_version_id": "AaG9PqqS5p_irqkhXVS5OOij0uvwBu5k",
+        "stage": "readback_reconciliation",
+        "status": "passed"
+      }
+    ],
+    "error": null,
+    "finished_at": "2026-11-08T22:19:23.475404+00:00",
+    "processed_days": [
+      "2012-01-01"
+    ],
+    "run_id": "bc21fae1b25e4f178768625c1149a3f6",
+    "started_at": "2026-11-08T22:19:23.443630+00:00",
+    "status": "succeeded",
+    "watermark_after": "2012-01-07",
+    "watermark_before": "2012-01-07"
+  },
+  {
+    "days": [],
+    "error": null,
+    "finished_at": "2026-11-08T22:19:24.049726+00:00",
+    "processed_days": [],
+    "run_id": "ce03056fc96c4903a5337a0bb8be5581",
+    "started_at": "2026-11-08T22:19:24.045109+00:00",
+    "status": "succeeded",
+    "watermark_after": "2012-01-07",
+    "watermark_before": "2012-01-07"
+  },
+  {
+    "days": [
+      {
+        "curated": {
+          "rows": 1,
+          "sums": {
+            "precipitation": "0.0",
+            "temp_max": "12.8",
+            "temp_min": "5.0",
+            "wind": "4.7"
+          }
+        },
+        "curated_version_id": "AaG9PqqZs5WacaAciDjj4JExKtNUNHtA",
+        "day": "2012-01-01",
+        "raw": {
+          "rows": 1,
+          "sums": {
+            "precipitation": "0.0",
+            "temp_max": "12.8",
+            "temp_min": "5.0",
+            "wind": "4.7"
+          }
+        },
+        "raw_sha256": "1f34b3cd4e23c4b594a64de3dc2e4b1da8eb11b0e1be40dbe8f3ac2721386d7c",
+        "raw_version_id": "AaG9PqqS5p_irqkhXVS5OOij0uvwBu5k",
+        "stage": "readback_reconciliation",
+        "status": "passed"
+      },
+      {
+        "curated": {
+          "rows": 1,
+          "sums": {
+            "precipitation": "10.9",
+            "temp_max": "10.6",
+            "temp_min": "2.8",
+            "wind": "4.5"
+          }
+        },
+        "curated_version_id": "AaG9Pqqb9dB6I_JsJUMjZFOTPjSV_bf2",
+        "day": "2012-01-02",
+        "raw": {
+          "rows": 1,
+          "sums": {
+            "precipitation": "10.9",
+            "temp_max": "10.6",
+            "temp_min": "2.8",
+            "wind": "4.5"
+          }
+        },
+        "raw_sha256": "f60ed02bf064fd83b5a1d95473ce3a177e52277f6fbcf9604b45976f885e92dd",
+        "raw_version_id": "AaG9PqqT9wspINNHO.U9IHnfxf_9PnYe",
+        "stage": "readback_reconciliation",
+        "status": "passed"
+      },
+      {
+        "curated": {
+          "rows": 0,
+          "sums": {
+            "precipitation": "0.0",
+            "temp_max": "0.0",
+            "temp_min": "0.0",
+            "wind": "0.0"
+          }
+        },
+        "day": "2012-01-03",
+        "error": "ValueError: reconciliation mismatch: row count: raw=1, curated=0; precipitation sum: raw=0.8, curated=0.0; temp_max sum: raw=11.7, curated=0.0; temp_min sum: raw=7.2, curated=0.0; wind sum: raw=2.3, curated=0.0",
+        "raw": {
+          "rows": 1,
+          "sums": {
+            "precipitation": "0.8",
+            "temp_max": "11.7",
+            "temp_min": "7.2",
+            "wind": "2.3"
+          }
+        },
+        "raw_sha256": "8a9a4ad761d487b9e92d5afa60174d96a286ba4c9eb41bcf0d99dc0215b683e8",
+        "raw_version_id": "AaG9PqqUJpDeco.0diil.SZKY77SEPxX",
+        "stage": "prepublication_reconciliation",
+        "status": "failed"
+      }
+    ],
+    "error": "ValueError: reconciliation mismatch: row count: raw=1, curated=0; precipitation sum: raw=0.8, curated=0.0; temp_max sum: raw=11.7, curated=0.0; temp_min sum: raw=7.2, curated=0.0; wind sum: raw=2.3, curated=0.0",
+    "finished_at": "2026-11-08T22:19:23.258003+00:00",
+    "processed_days": [
+      "2012-01-01",
+      "2012-01-02"
+    ],
+    "run_id": "ed5474ed1c464510b6fed91b96e02163",
+    "started_at": "2026-11-08T22:19:23.169239+00:00",
+    "status": "failed",
+    "watermark_after": "2012-01-02",
+    "watermark_before": null
+  }
+]

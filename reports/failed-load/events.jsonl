@@ -1,0 +1,14 @@
+{"event": "run_started", "mode": "incremental", "run_id": "ed5474ed1c464510b6fed91b96e02163", "timestamp": "2026-11-08T22:19:23.169249+00:00"}
+{"day": "2012-01-01", "event": "partition_started", "run_id": "ed5474ed1c464510b6fed91b96e02163", "timestamp": "2026-11-08T22:19:23.180758+00:00"}
+{"day": "2012-01-01", "event": "raw_validated", "rows": 1, "run_id": "ed5474ed1c464510b6fed91b96e02163", "timestamp": "2026-11-08T22:19:23.183008+00:00"}
+{"day": "2012-01-01", "event": "partition_published", "key": "weather/date=2012-01-01/part-00000.parquet", "run_id": "ed5474ed1c464510b6fed91b96e02163", "timestamp": "2026-11-08T22:19:23.203732+00:00"}
+{"day": "2012-01-01", "event": "reconciled", "rows": 1, "run_id": "ed5474ed1c464510b6fed91b96e02163", "timestamp": "2026-11-08T22:19:23.212306+00:00"}
+{"day": "2012-01-01", "event": "watermark_committed", "run_id": "ed5474ed1c464510b6fed91b96e02163", "timestamp": "2026-11-08T22:19:23.214359+00:00"}
+{"day": "2012-01-02", "event": "partition_started", "run_id": "ed5474ed1c464510b6fed91b96e02163", "timestamp": "2026-11-08T22:19:23.214420+00:00"}
+{"day": "2012-01-02", "event": "raw_validated", "rows": 1, "run_id": "ed5474ed1c464510b6fed91b96e02163", "timestamp": "2026-11-08T22:19:23.216408+00:00"}
+{"day": "2012-01-02", "event": "partition_published", "key": "weather/date=2012-01-02/part-00000.parquet", "run_id": "ed5474ed1c464510b6fed91b96e02163", "timestamp": "2026-11-08T22:19:23.232751+00:00"}
+{"day": "2012-01-02", "event": "reconciled", "rows": 1, "run_id": "ed5474ed1c464510b6fed91b96e02163", "timestamp": "2026-11-08T22:19:23.240871+00:00"}
+{"day": "2012-01-02", "event": "watermark_committed", "run_id": "ed5474ed1c464510b6fed91b96e02163", "timestamp": "2026-11-08T22:19:23.242920+00:00"}
+{"day": "2012-01-03", "event": "partition_started", "run_id": "ed5474ed1c464510b6fed91b96e02163", "timestamp": "2026-11-08T22:19:23.242979+00:00"}
+{"day": "2012-01-03", "event": "raw_validated", "rows": 1, "run_id": "ed5474ed1c464510b6fed91b96e02163", "timestamp": "2026-11-08T22:19:23.244857+00:00"}
+{"error": "ValueError: reconciliation mismatch: row count: raw=1, curated=0; precipitation sum: raw=0.8, curated=0.0; temp_max sum: raw=11.7, curated=0.0; temp_min sum: raw=7.2, curated=0.0; wind sum: raw=2.3, curated=0.0", "event": "run_failed", "run_id": "ed5474ed1c464510b6fed91b96e02163", "timestamp": "2026-11-08T22:19:23.257942+00:00", "watermark": "2012-01-02"}

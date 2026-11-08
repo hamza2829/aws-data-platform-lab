@@ -1,0 +1,249 @@
+{
+  "workflow_url": "https://github.com/hamza2829/aws-data-platform-lab/actions/runs/42529503784",
+  "source_commit": "7713f18f196602eab0eace87d362146b337c2ed3",
+  "tests": {
+    "tests": 47,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "coverage": {
+    "covered_lines": 369,
+    "num_statements": 372,
+    "percent_covered": 99.1304347826087,
+    "percent_covered_display": "99",
+    "missing_lines": 3,
+    "excluded_lines": 0,
+    "percent_statements_covered": 99.19354838709677,
+    "percent_statements_covered_display": "99",
+    "num_branches": 88,
+    "num_partial_branches": 1,
+    "covered_branches": 87,
+    "missing_branches": 1,
+    "percent_branches_covered": 98.86363636363636,
+    "percent_branches_covered_display": "99"
+  },
+  "integration": {
+    "passed": true,
+    "source_days": 7,
+    "curated_partitions": 7,
+    "curated_rows": 7,
+    "watermark": "2012-01-07",
+    "history_runs": 7,
+    "failed_attempts": 2,
+    "orchestration_success": true,
+    "metrics": [
+      {
+        "key": "weather/date=2012-01-01/part-00000.parquet",
+        "version_id": "AaG9Pqqza.mQP8mqjGau3mdhQYDapXH4",
+        "rows": 1,
+        "sums": {
+          "precipitation": "0.0",
+          "temp_max": "12.8",
+          "temp_min": "5.0",
+          "wind": "4.7"
+        }
+      },
+      {
+        "key": "weather/date=2012-01-02/part-00000.parquet",
+        "version_id": "AaG9Pqqb9dB6I_JsJUMjZFOTPjSV_bf2",
+        "rows": 1,
+        "sums": {
+          "precipitation": "10.9",
+          "temp_max": "10.6",
+          "temp_min": "2.8",
+          "wind": "4.5"
+        }
+      },
+      {
+        "key": "weather/date=2012-01-03/part-00000.parquet",
+        "version_id": "AaG9Pqq.cF4brMMVMcXoMJqcS1mI.xLt",
+        "rows": 1,
+        "sums": {
+          "precipitation": "0.8",
+          "temp_max": "11.7",
+          "temp_min": "7.2",
+          "wind": "2.3"
+        }
+      },
+      {
+        "key": "weather/date=2012-01-04/part-00000.parquet",
+        "version_id": "AaG9PqqjA3y546Jww1SUxiFsf6O47cr_",
+        "rows": 1,
+        "sums": {
+          "precipitation": "20.3",
+          "temp_max": "12.2",
+          "temp_min": "5.6",
+          "wind": "4.7"
+        }
+      },
+      {
+        "key": "weather/date=2012-01-05/part-00000.parquet",
+        "version_id": "AaG9PqqlYKHVig7ZgJdegGmClb84omIR",
+        "rows": 1,
+        "sums": {
+          "precipitation": "1.3",
+          "temp_max": "8.9",
+          "temp_min": "2.8",
+          "wind": "6.1"
+        }
+      },
+      {
+        "key": "weather/date=2012-01-06/part-00000.parquet",
+        "version_id": "AaG9Pqqn5B4nSr16iNHVNTAoJAbKpNPM",
+        "rows": 1,
+        "sums": {
+          "precipitation": "2.5",
+          "temp_max": "4.4",
+          "temp_min": "2.2",
+          "wind": "2.2"
+        }
+      },
+      {
+        "key": "weather/date=2012-01-07/part-00000.parquet",
+        "version_id": "AaG9PqqpE.IAMmcTO0527HwBmBF9NKKc",
+        "rows": 1,
+        "sums": {
+          "precipitation": "0.0",
+          "temp_max": "7.2",
+          "temp_min": "2.8",
+          "wind": "2.3"
+        }
+      }
+    ],
+    "failure_run_id": "ed5474ed1c464510b6fed91b96e02163",
+    "resume_run_id": "b4bbce9fafec41c4b9cf2d7a131d0af8",
+    "schema_failure_run_id": "b99b2d6457624432ba980337cbbff46c"
+  },
+  "infrastructure": {
+    "endpoint": "http://localhost:4566",
+    "buckets": [
+      {
+        "layer": "raw",
+        "bucket": "aws-data-platform-lab-raw",
+        "versioning": "Enabled",
+        "lifecycle": {
+          "ID": "expire-obsolete-versions",
+          "Filter": {
+            "Prefix": ""
+          },
+          "Status": "Enabled",
+          "NoncurrentVersionExpiration": {
+            "NoncurrentDays": 30
+          },
+          "AbortIncompleteMultipartUpload": {
+            "DaysAfterInitiation": 7
+          }
+        },
+        "public_access_block": {
+          "BlockPublicAcls": true,
+          "IgnorePublicAcls": true,
+          "BlockPublicPolicy": true,
+          "RestrictPublicBuckets": true
+        },
+        "encryption": {
+          "Rules": [
+            {
+              "ApplyServerSideEncryptionByDefault": {
+                "SSEAlgorithm": "AES256"
+              },
+              "BucketKeyEnabled": false
+            }
+          ]
+        }
+      },
+      {
+        "layer": "curated",
+        "bucket": "aws-data-platform-lab-curated",
+        "versioning": "Enabled",
+        "lifecycle": {
+          "ID": "expire-obsolete-versions",
+          "Filter": {
+            "Prefix": ""
+          },
+          "Status": "Enabled",
+          "NoncurrentVersionExpiration": {
+            "NoncurrentDays": 30
+          },
+          "AbortIncompleteMultipartUpload": {
+            "DaysAfterInitiation": 7
+          }
+        },
+        "public_access_block": {
+          "BlockPublicAcls": true,
+          "IgnorePublicAcls": true,
+          "BlockPublicPolicy": true,
+          "RestrictPublicBuckets": true
+        },
+        "encryption": {
+          "Rules": [
+            {
+              "ApplyServerSideEncryptionByDefault": {
+                "SSEAlgorithm": "AES256"
+              },
+              "BucketKeyEnabled": false
+            }
+          ]
+        }
+      }
+    ],
+    "policies": {
+      "pipeline": {
+        "Version": "2012-10-17",
+        "Statement": [
+          {
+            "Action": [
+              "s3:ListBucket",
+              "s3:GetBucketLocation"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+              "arn:aws:s3:::aws-data-platform-lab-curated",
+              "arn:aws:s3:::aws-data-platform-lab-raw"
+            ]
+          },
+          {
+            "Action": [
+              "s3:GetObject",
+              "s3:PutObject",
+              "s3:GetObjectVersion"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+              "arn:aws:s3:::aws-data-platform-lab-curated/*",
+              "arn:aws:s3:::aws-data-platform-lab-raw/*"
+            ]
+          }
+        ]
+      },
+      "analyst": {
+        "Version": "2012-10-17",
+        "Statement": [
+          {
+            "Action": [
+              "s3:ListBucket"
+            ],
+            "Condition": {
+              "StringLike": {
+                "s3:prefix": [
+                  "weather/*"
+                ]
+              }
+            },
+            "Effect": "Allow",
+            "Resource": "arn:aws:s3:::aws-data-platform-lab-curated"
+          },
+          {
+            "Action": [
+              "s3:GetObject",
+              "s3:GetObjectVersion"
+            ],
+            "Effect": "Allow",
+            "Resource": "arn:aws:s3:::aws-data-platform-lab-curated/weather/*"
+          }
+        ]
+      }
+    },
+    "passed": true
+  }
+}
